@@ -31,6 +31,26 @@
   flex-shrink: none;
 }
 
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  
+  width: 80%;
+  height: 9%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.card2 {
+  
+  transition: 0.3s;
+  width: 80%;
+  height: 23%;
+}
+
+.card2:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
 
 
 
@@ -135,10 +155,11 @@
 
 
 </div>
+<div class="card2">
        <div class="a" id="register">
-
+       <h1>Register</h1>
         <div class="container">
-                  <form action="register.php" method="POST" class="was-validated">
+                  <form action="register1.php" method="POST" class="was-validated">
               <div class="form-group">
                 <label for="name">Name:</label>
                 <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name" required>
@@ -174,22 +195,22 @@
 
                   <div class="form-check">
                     <label class="form-check-label" for="check1">
-                      <input type="checkbox" class="form-check-input" id="check1" name="option" value="something" checked>Blind Code
+                      <input type="checkbox" class="form-check-input" id="check1" name="tecno[]" value="Blind Code" checked>Blind Code
                     </label>
                   </div>
                   <div class="form-check">
                     <label class="form-check-label" for="check2">
-                      <input type="checkbox" class="form-check-input" id="check2" name="option" value="something">Quiriosity
+                      <input type="checkbox" class="form-check-input" id="check2" name="tecno[]" value="Quiriosity">Quiriosity
                     </label>
                   </div>
                   <div class="form-check">
                     <label class="form-check-label">
-                      <input type="checkbox" class="form-check-input" id="check3" name="option" value="something">Debug
+                      <input type="checkbox" class="form-check-input" id="check3" name="tecno[]" value="Debug">Debug
                     </label>
                   </div>
                   <div class="form-check">
                     <label class="form-check-label">
-                      <input type="checkbox" class="form-check-input" id="check4" name="option" value="something">Sql
+                      <input type="checkbox" class="form-check-input" id="check4" name="tecno[]" value="Sql">Sql
                     </label>
                   </div>
 
@@ -211,7 +232,8 @@
 
 
         </div><br><br>
-
+</div>
+        <div class="card">
         <div class="login" id="login1">
 
             <h1>Login</h1>
@@ -231,7 +253,7 @@
                       <input class="form-check-input" type="checkbox" name="remember"> Remember me
                     </label>
                   </div> -->
-                  <input type="submit" name="login" class="btn btn-primary">
+                  <input type="submit" name="login" class="btn btn-primary" value="Login">
                 </form>
               </div><br><br><br>
 
@@ -241,7 +263,7 @@
 
 
             </div>
-
+</div>
 
 
 
@@ -259,7 +281,7 @@
 
   <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
     <div class="container text-center">
-      <small>Copyright &copy; Your Website</small>
+     
     </div>
   </footer>
 
