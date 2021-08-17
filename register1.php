@@ -1,5 +1,5 @@
 <?php
-$con=mysqli_connect("localhost","root","","College");
+$con=mysqli_connect("localhost","root","","college");
 if(!$con)
 {
 	echo "Connection error".mysqli_connect_error();
@@ -12,15 +12,21 @@ if(isset($_POST['submit']))
 	$cname=$_POST['cname'];
 	$email=$_POST['email'];
 	$year=$_POST['year'];
-	$event=$_POST['option'];
+	 
 	$pass=$_POST['pswd'];
-
-	$query="insert into Register(`User_Name`,`College`,`Email`,`Year`,`Event`,`Password`) values('$name','$cname','$email','$year','$event','$pass')";
+	$checkbox1=$_POST['tecno'];  
+	$chk="";  
+	foreach($checkbox1 as $chk1)  
+   {  
+      $chk .= $chk1.",";  
+   }  
+  
+	$query="insert into Register(`User_Name`,`College`,`Email`,`Year`,`Event`,`Password`) values('$name','$cname','$email','$year','$chk','$pass')";
 
 	if(mysqli_query($con,$query))
 	{
-		echo "<script>alert('Registered!!!')</script>";
-		header('location:Demo.php');
+		echo "<script>alert('Registered Success')</script>";
+		header("Refresh:1; url=Demo.php");
 	}
 
 }
